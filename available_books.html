@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Available Books</title>
+  <link rel="stylesheet" href="stylesss.css">
+</head>
+<body>
+  <header>
+    <h1>Available Books</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="available_books.html">Available Books</a></li>
+        <li><a href="index.html#issue">Issue Book</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="book-list">
+    <h2>Available Books</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Price</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Operating Systems</td>
+          <td>Abraham Silberschatz</td>
+          <td>$10</td>
+          <td>Available</td>
+        </tr>
+        <tr>
+          <td>Datastructures</td>
+          <td>Klaus Samelson</td>
+          <td>$15</td>
+          <td>Available</td>
+        </tr>
+        <tr>
+          <td>Computer Networks</td>
+          <td>David James Wetherall</td>
+          <td>$30</td>
+          <td>Available</td>
+        </tr>
+        <tr>
+          <td>Clean Code</td>
+          <td>Robert C. Martin</td>
+          <td>$50</td>
+          <td>Not Available</td>
+        </tr>
+        <tr>
+          <td>Programming in java</td>
+          <td>George Orwell</td>
+          <td>$70</td>
+          <td>Available</td>
+        </tr>
+        <tr>
+          <td>Automata</td>
+          <td>F. Scott Fitzgerald</td>
+          <td>$45</td>
+          <td>Not Available</td>
+        </tr>
+        <tr>
+          <td>SQL</td>
+          <td>Alan Beaulieu</td>
+          <td>$50</td>
+          <td>Available</td>
+        </tr>
+        <tr>
+          <td>Database Systems</td>
+          <td>M.Thomas</td>
+          <td>$70</td>
+          <td>Not Available</td>
+        </tr>
+        <tr>
+          <td>The Internet of Things</td>
+          <td>Samuel Greengard</td>
+          <td>$20</td>
+          <td>Available</td>
+        </tr>
+        <tr>
+          <td>C programming</td>
+          <td>Greg Perry</td>
+          <td>$120</td>
+          <td>Not Available</td>
+        </tr>
+        <tr>
+          <td>Compiler design</td>
+          <td>Jeffrey Ullman</td>
+          <td>$90</td>
+          <td>Available</td>
+        </tr>
+        <tr>
+          <td>mySQL</td>
+          <td>Paul DuBois</td>
+          <td>$80</td>
+          <td>Available</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </section>
+  <script>
+    window.onload = function() {
+      fetch('/api/books')
+        .then(response => response.json())
+        .then(data => {
+          let tableBody = document.querySelector('table tbody');
+          tableBody.innerHTML = '';
+  
+          data.forEach(book => {
+            let row = `<tr>
+              <td>${book.title}</td>
+              <td>${book.author}</td>
+              <td>${book.price}</td>
+              <td>${book.status}</td>
+            </tr>`;
+            tableBody.innerHTML += row;
+          });
+        })
+        .catch(error => console.error('Error fetching books:', error));
+    };
+  </script>
+  
+  
+  <footer>
+    <p>Contact us at admin@domain.com</p>
+  </footer>
+</body>
+</html>

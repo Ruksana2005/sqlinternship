@@ -1,0 +1,92 @@
+/* Background Animation */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #f06, #f90, #09f, #0f6, #f06, #90f);
+  background-size: 400% 400%;
+  animation: gradientAnimation 12s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  text-align: center;
+}
+
+.header-text {
+  font-size: 3em;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.success-box {
+  text-align: center;
+  padding: 30px 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  border: 2px solid #ff0073;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  max-width: 600px;
+  margin-top: 20px;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.success-box p {
+  font-size: 1.6em;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.success-box p strong {
+  color: #ff0073;
+}
+
+.success-box .description {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.success-box button {
+  background-color: #ff0073;
+  color: white;
+  padding: 12px 28px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.success-box button:hover {
+  background-color: #ff3366;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.success-box button:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
