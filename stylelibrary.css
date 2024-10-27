@@ -1,0 +1,99 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #29465b; /* Dark blue background */
+  color: #fff; 
+  padding: 1em 0;
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.header-image {
+  max-width: 50px; /* Reduce image size */
+  max-height: 50px;
+  margin-left: 100px; /* Add some space between image and edge */
+}
+h1 {
+  margin-top: -3px; /* Move the text 20 pixels closer */
+} 
+.page-title {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center; /* Center the navigation items */
+}
+
+nav li {
+  display: inline-block; /* Display items horizontally */
+  margin: 0 10px; /* Add some space between items */
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+section {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border: 5px solid #ccc; /* Increase the border width to 5px */
+  border-radius: 8px;
+}
+
+h2 {
+  color: #29465b; 
+  border-bottom: 2px solid #29465b; /* Add a bottom border to the h2 elements */
+}
+
+/* Form Styling */
+#issue form {
+  display: flex;
+  flex-direction: column; /* Arrange form fields vertically */
+}
+
+.form-group {
+  margin-bottom: 15px; 
+}
+
+label {
+  display: block; /* Makes labels appear on their own line */
+  margin-bottom: 5px;
+}
+
+input[type="text"], input[type="date"] {
+  width: 100%; /* Input fields will take full width of their container */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #29465b;
+  border-radius: 4px;
+}
+button {
+  background-color: #29465b; 
+  color: white; 
+  padding: 10px 20px;
+  border: none; 
+  cursor: pointer; 
+}
+footer {
+  text-align: center;
+  padding: 1em 0;
+  background-color: #333; 
+  color: #fff; 
+}
