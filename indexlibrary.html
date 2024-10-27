@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Library Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1 class="page-title">Library Management System</h1>
+      <img src="./library_image.jpeg" alt="Library Image" class="header-image"> 
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="available_books.html">Available Books</a></li>
+        <li><a href="#issue">Issue Book</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="home-section">
+    <h2>Welcome to the Library</h2>
+    <p>A Library Management System (LMS) helps libraries manage and organize their resources more efficiently.<br>
+
+      <strong>Book Tracking:</strong> It keeps track of all the books in the library, including available and borrowed ones.<br>
+      <strong>Issuing and Returning Books:</strong> Helps manage the process of issuing books to students or users and tracks their return dates.<br>
+      <strong>Catalog Search:</strong> Users can easily search for books by title, author, or subject.<br>
+      <strong>User Management:</strong> Keeps records of library users, such as students or members, including their borrowing history.<br>
+      <strong>Alerts:</strong> Sends reminders to users about overdue books or upcoming return dates.<br>
+      <strong>Management:</strong> Helps librarians maintain a catalog of new arrivals and remove old or damaged books.<br></p>
+  </section>
+
+  <section id="issue" class="issue-section">
+    <h2>Issue a Book</h2>
+    <form id="issue-book-form">
+      <div class="form-group">
+        <label for="id">id</label>
+        <input type="text" id="id" name="id" required>
+      </div>
+      <div class="form-group">
+        <label for="user">username</label>
+        <input type="text" id="user" name="user" required>
+      </div>
+      <div class="form-group">
+        <label for="member_id">member_id</label>
+        <input type="text" id="member_id" name="member_id" required>
+      </div>
+      <div class="form-group">
+        <label for="book_title">book_title</label>
+        <input type="text" id="book_title" name="book_title" required>
+      </div>
+      <div class="form-group">
+        <label for="issue_date">issue_date</label>
+        <input type="date" id="issue_date" name="issue_date" required>
+      </div>
+      <div class="form-group">
+        <label for="return_date">return_date</label>
+        <input type="date" id="return_date" name="return_date" required>
+      </div>
+
+      <button type="submit">Issue Book</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Contact us at admin@domain.com</p>
+  </footer>
+
+  
+   </body>
+</html>
